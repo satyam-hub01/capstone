@@ -13,7 +13,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Top Search Bar */
+
 .top {
   background-color: #222;
   display: flex;
@@ -49,12 +49,12 @@ body {
   cursor: pointer;
 }
 
-/* Main layout: sidebar + videos */
+
 .main {
   display: flex;
 }
 
-/* Sidebar Menu */
+
 .menu {
   width: 180px;
   background-color: #1b1b1b;
@@ -67,20 +67,20 @@ body {
 }
 
 .menu li {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .menu a:hover {
   color: #ff3c00;
 }
 
-/* Videos Section */
+
 .videos {
   flex: 1;
   display: flex;
@@ -104,7 +104,7 @@ body {
 }
 
 .card h3 {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 8px;
   color: white;
 }
@@ -114,7 +114,7 @@ body {
   color: #bbb;
 }
 
-/* Footer */
+
 .foot {
   background-color: #222;
   text-align: center;
@@ -196,19 +196,19 @@ body {
   text-align: center;
   color: #aaa;
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .create-post {
   border: 1px solid #333;
-  padding: 15px;
+  padding: 16px;
   border-radius: 8px;
   background-color: #2a2a2a;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .create-post img {
@@ -470,6 +470,7 @@ body {
 
 .save-btn:hover {
   background-color: #ff5500;
+  cursor: pointer;
 }
 
 .foot {
