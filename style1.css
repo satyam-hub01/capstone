@@ -587,7 +587,7 @@ body.hiiii {
   transform: scale(1.09);
 }
 
-/* Buttons smoothness */
+/* Buttons smooth */
 .top button,
 .search button {
   transition: 0.2s ease-in-out;
@@ -606,8 +606,328 @@ body.hiiii {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Smooth fade animation when page loads */
+body.lol {
+  animation: fadeInPage 0.8s ease-in-out;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth transitions globally */
+* {
+  transition: 0.25s ease-in-out;
+}
+
+/* Create post box hover light effect */
+.create-post {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.create-post:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+.create-post textarea {
+  transition: 0.2s ease;
+}
+.create-post textarea:focus {
+  border: 2px solid #508df8;
+  transform: scale(1.01);
+}
+
+/* Post card animation */
+.post {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  transform: translateY(0px);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+}
+.post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Image zoom effect */
+.post img {
+  width: 100%;
+  border-radius: 10px;
+}
+.post:hover img {
+  transform: scale(1.03);
+}
+
+/* Action buttons */
+.actions button {
+  background: #eee;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.actions button:hover {
+  background: #4b88f7;
+  color: white;
+  transform: scale(1.07);
+}
+
+/* Profile img zoom on hover */
+.user-info img {
+  border-radius: 50%;
+}
+.user-info img:hover {
+  transform: scale(1.15);
+}
+
+/* Footer intro animation */
+.foot {
+  animation: slideUp 0.8s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
 
 
-  
+
+@media (max-width: 768px) {
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+
+  .main {
+    flex-direction: column;
+  }
+
+  /
+  .menu {
+    order: -1;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .videos {
+    grid-template-columns: 1fr;
+  }
+
+
+  .search input {
+    width: 100%;
+  }
+
+  .search ul {
+    width: 100%;
+  }
+
+
+  .community-container, .settings-container {
+    padding: 10px 15px;
+  }
+
+  .create-post {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .create-post img {
+    align-self: flex-start;
+  }
+}
+
+
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* DARK MODE */
+body.dark {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+/* TOP BAR */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark .top {
+    background-color: #2b2b2b;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+/* SEARCH */
+.search {
+    position: relative;
+}
+
+.search input {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.search button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#suggestions {
+    list-style: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+body.dark #suggestions {
+    background: #2b2b2b;
+    color: #f5f5f5;
+    border-color: #555;
+}
+
+#suggestions li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #eee;
+}
+
+body.dark #suggestions li:hover {
+    background-color: #444;
+}
+
+/* SETTINGS CONTAINER */
+.settings-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark .settings-container {
+    background: #2b2b2b;
+}
+
+.settings-container h2 {
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 14px;
+    color: #666;
+}
+
+body.dark .subtext {
+    color: #ccc;
+}
+
+/* FORM */
+.settings-form .setting {
+    margin-bottom: 15px;
+}
+
+.settings-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.settings-form input, .settings-form select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+body.dark .settings-form input,
+body.dark .settings-form select {
+    background-color: #444;
+    color: #f5f5f5;
+    border-color: #666;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #0056b3;
+}
+
+/* FOOTER */
+.foot {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+body.dark .foot {
+    color: #ccc;
+}
+
+/* MEDIA QUERY FOR MOBILE */
+@media screen and (max-width: 600px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .settings-container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+}
+
 
 

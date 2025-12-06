@@ -1,20 +1,21 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EchoStream | Settings</title>
-  <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body class="hell">
 
-  <div class="top">
-    <h1 class="logo">🎧 EchoStream</h1>
-    <div class="search">
-      <input type="text" placeholder="Search settings...">
-      <button>Search</button>
-    </div>
+ <div class="top">
+  <h1 class="logo">🎧 EchoStream</h1>
+  <div class="search">
+    <input id="searchbox" type="text" placeholder="Search settings...">
+    <button>Search</button>
+    <ul id="suggestions"></ul> 
   </div>
+</div>
 
   <div class="settings-container">
     <h2>⚙️ Account Settings</h2>
@@ -44,7 +45,7 @@
 
       <div class="setting">
         <label>Theme</label>
-        <select>
+        <select id="themeSelect">
           <option>Dark</option>
           <option>Light</option>
         </select>
@@ -63,5 +64,6 @@
     <p>© 2025 EchoStream | Designed by Satyam</p>
   </div>
 
+  <script src="project.js"></script>
 </body>
 </html>
