@@ -25,6 +25,7 @@ body {
 .logo {
   color: #ff3c00;
   font-size: 22px;
+  box-shadow: 2px 10px 10px red;
 }
 
 .search {
@@ -494,4 +495,119 @@ body {
 .lol{
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQed9ordyQqADj0Dbb6ftNK5bo3jdFfUHQhiiLU0TpWRLoprL6lkaoraBzS&s=10);
 }
+@media all and (max-width:200px){
+.lol .hiiii {
+
+  padding: 20px;
+  background-color: red;
+  
+}
+}
+
+
+
+
+
+/* Light Mode */
+.light {
+  background: #f5f5f5;
+  color: #222;
+}
+
+.light input,
+.light select,
+.light button {
+  background: #fff;
+  color: #222;
+  border: 1px solid #bbb;
+}
+
+.light .top,
+.light .settings-container {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.hell,
+.light {
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Smooth transitions for whole UI */
+* {
+  transition: 0.3s ease-in-out;
+}
+
+/* Page fade-in animation */
+body.hiiii {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Menu Hover Animation */
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  border-radius: 6px;
+}
+.menu ul li a:hover {
+  background: rgb(61, 136, 241);
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Video Cards Hover Effects */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Smooth hover zoom for thumbnails */
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.09);
+}
+
+/* Buttons smoothness */
+.top button,
+.search button {
+  transition: 0.2s ease-in-out;
+}
+.top button:hover {
+  transform: scale(1.08);
+}
+
+/* Footer fade-in */
+.foot {
+  animation: fadeUp 0.7s ease-in-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+  
+
 
